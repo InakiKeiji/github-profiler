@@ -24,10 +24,13 @@ let request = https.request(options, response => {
     // TODO: [x] Parse the data
     // Convert String to JSON (JavaScript object)
     let profile = JSON.parse(body);
-    console.log(profile.avatar_url);
+    // console.log(profile.avatar_url);
     // console.log(typeof profile);
+    // TODO: [x] Print the data out
+    console.log(
+      `${profile.login} owns ${profile.public_repos} repo(s) and has ${profile.followers} follower(s)`
+    );
   });
-  // TODO: Print the data out
 });
 
 request.end();
