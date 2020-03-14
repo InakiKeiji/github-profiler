@@ -20,10 +20,13 @@ let request = https.request(options, response => {
   });
   response.on("end", () => {
     // console.log(body);
-    console.log(typeof body);
+    // console.log(typeof body);
+    // TODO: [x] Parse the data
+    // Convert String to JSON (JavaScript object)
+    let profile = JSON.parse(body);
+    console.log(profile.avatar_url);
+    // console.log(typeof profile);
   });
-  // TODO: Parse the data
-  // Convert String to JSON (JavaScript object)
   // TODO: Print the data out
 });
 
